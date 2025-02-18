@@ -55,10 +55,23 @@ class Motorbike extends Vehicle {
   
 
   // TODO: Override the printDetails method from the Vehicle class
+  override printDetails(): void {
   // TODO: The method should call the printDetails method of the parent class
+  super.printDetails();
   // TODO: The method should log the details of the Motorbike
   // TODO: The details should include the VIN, make, model, year, weight, top speed, color, and wheels
+  console.log(`Motorbike Details:
+    VIN: ${this.vin}  
+    Color: ${this.color}  
+    Make: ${this.make}  
+    Model: ${this.model}  
+    Year: ${this.year}  
+    Weight: ${this.weight} lbs
+    Top Speed: ${this.topSpeed} mph
+    Wheels: ${this.wheels.map(wheel => `${wheel.getDiameter} inch ${wheel.getTireBrand} tire`).join(', ')}`);
 }
+}
+
 
 // Export the Motorbike class as the default export
 export default Motorbike;
