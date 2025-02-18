@@ -38,6 +38,14 @@ class Motorbike extends Vehicle {
     this.weight = weight;
     this.topSpeed = topSpeed;
     // TODO: The constructor should check if the wheels array has 2 elements and create 2 new default Wheel objects if it does not
+    if (wheels.length !== 2) {
+      this.wheels = [new Wheel(17, 'DefaultBrand'),
+        new Wheel(17, 'DefaultBrand'),
+      ];
+    } else {
+      this.wheels = wheels;
+  }
+  }
 
   // TODO: Implement the wheelie method
     // TODO: The method should log the message "Motorbike [make] [model] is doing a wheelie!"
