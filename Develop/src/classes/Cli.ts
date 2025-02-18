@@ -301,6 +301,15 @@ class Cli {
         // TODO: check if the selected vehicle is the truck
         // TODO: if it is, log that the truck cannot tow itself then perform actions on the truck to allow the user to select another action
         // TODO: if it is not, tow the selected vehicle then perform actions on the truck to allow the user to select another action
+        const vehicleToTow = this.vehicles.find(
+          (vehicle) => vehicle.vin === answers.vehicleToTow
+        );
+        if (vehicleToTow) {
+          console.log(
+            `${truck.make} ${truck.model} is towing ${vehicleToTow.make} ${vehicleToTow.model}.`
+          );
+        }
+        this.performActions();
       });
   }
 
