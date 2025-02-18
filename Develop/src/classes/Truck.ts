@@ -66,6 +66,7 @@ class Truck extends Vehicle implements AbleToTow {
       console.log(`${vehicle.make} ${vehicle.model} is too heavy to be towed by ${this.make} ${this.model}.`);
     }
   }
+
   // TODO: Override the printDetails method from the Vehicle class
   override printDetails(): void {
     // TODO: The method should call the printDetails method of the parent class
